@@ -1,0 +1,12 @@
+user:
+api-key:
+tunnel-identifier: localdev
+verbose: 0
+region:
+logfile: "-"
+no-ssl-bump-domains: [ all ]
+shared-tunnel: false
+proxy-tunnel: false
+no-autodetect: true
+no-remove-colliding-tunnels: false
+ocsp: log-only
