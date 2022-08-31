@@ -28,13 +28,13 @@ grep localdev /private/etc/hosts
 
 <br>
 
-- Start your local http/s server, or use the simple flash app provided below
+- Start your local http/s server, or use the simple Flask app provided below
 
 
 ```
 python3 -m venv venv
 . venv/bin/activate
-pip install Flask 
+pip install Flask
 flask --app app/hello run --port 7777
 ```
 
@@ -53,7 +53,7 @@ sc --config-file sauce-connect-localdev.yml
 - Select the sauce-connect tunnel.
   - It should be `<SAUCE_USERNAME>/localdev`
 - Start your session.
-- Enter the URL `http://localdev:7777` and against your local host's resources!
+- Enter the URL `http://localdev:7777` and test against your local host's resources!
   - Validated on Browsers, Devices, Emulators, and Simulators.
 
 
