@@ -1,0 +1,31 @@
+#!/bin/bash
+
+
+
+export SAUCE_REGION="eu-central-1"
+export 
+
+sc --config-file ./etc/sc-network-capture.yml &
+sc --config-file ./etc/sc-localdev.yml &
+sc --config-file ./etc/sc-wonderproxy-ca.yml --proxy-userpwd "${WONDERPROXY_USER}:${WONDERPROXY_PASS}" &
+sc --config-file ./etc/sc-wonderproxy-au.yml --proxy-userpwd "${WONDERPROXY_USER}:${WONDERPROXY_PASS}" &
+sc --config-file ./etc/sc-wonderproxy-es.yml --proxy-userpwd "${WONDERPROXY_USER}:${WONDERPROXY_PASS}" &
+sc --config-file ./etc/sc-wonderproxy-uk.yml --proxy-userpwd "${WONDERPROXY_USER}:${WONDERPROXY_PASS}" &
+
+
+pgrep -fl "sc --config-file"
+pkill -fl "sc --config-file"
+
+
+http://chls.pro/ssl >> simulator
+http://localdev:7777 >> chrome
+https://google.com >>  ipad
+https://maps.google.com >> safari 
+https://www.google.com/search?q=where+am+i >> android
+
+
+
+
+
+- Demo Notes
+  - iOS streaming with a proxy added can change the stream quality

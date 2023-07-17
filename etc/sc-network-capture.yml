@@ -1,0 +1,9 @@
+user:
+api-key:
+tunnel-identifier: netcap
+verbose: 0
+region: 
+logfile: "-"
+no-ssl-bump-domains: [ all ]
+shared-tunnel: false
+proxy: localhost:8180

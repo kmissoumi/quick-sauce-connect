@@ -1,0 +1,12 @@
+user:
+api-key:
+tunnel-identifier: geoip-es
+verbose: 0
+region: 
+logfile: "-"
+no-ssl-bump-domains: [ all ]
+direct-domains: [ ]
+proxy-localhost: false
+proxy-tunnel: false
+shared-tunnel: false
+proxy: madrid.wonderproxy.com:12000
