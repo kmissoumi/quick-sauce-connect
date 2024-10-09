@@ -55,7 +55,7 @@ flask --app app/hello run --port 7777
 - Start Sauce Connect
 
 ```
-sc --config-file ./etc/sc-localdev.yml
+sc run --config-file ./etc/sc-localdev.yml
 ```
 
 
