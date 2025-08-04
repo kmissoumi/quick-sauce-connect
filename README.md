@@ -6,6 +6,8 @@ Sauce Connect configuration examples. These examples are intended to demonstrate
 <br>
 
 > If this is the first time using Sauce Connect, the [Quick Start Guide for Sauce Connect][docs-104] is a helpful reference to supplement these examples.
+>
+> For comprhensive usage, the [CLI docs for _saucectl run_][docs-105], lists all runtime parameters.
 > 
 > _Network egress to the Sauce API and platform is needed to start a Sauce Connect tunnel. The [Sauce Connect FAQ][docs-101] and [Sauce Labs Endpoints][docs-102] have details._
 
@@ -107,9 +109,9 @@ sc --config-file ./etc/sc-wonderproxy-au.yml --proxy-userpwd "${WONDERPROXY_USER
 [Live Testing EU]: https://app.eu-central-1.saucelabs.com/live/web-testing
 [docs-101]: https://docs.saucelabs.com/secure-connections/sauce-connect/faq/#what-outbound-ports-do-i-need-open-for-sauce-connect-proxy
 [docs-102]: https://docs.saucelabs.com/basics/data-center-endpoints/#data-center-endpoints
-[docs-103]: https://docs.saucelabs.com/secure-connections/sauce-connect/setup-configuration/specialized-environments/#testing-mobile-devices-against-localhost
+[docs-103]: https://docs.saucelabs.com/secure-connections/sauce-connect-5/guides/localhost-proxying/
 [docs-104]: https://docs.saucelabs.com/secure-connections/sauce-connect/quickstart
-
+[docs-105]: https://docs.saucelabs.com/dev/cli/sauce-connect-5/run/
 
 
 <br>
