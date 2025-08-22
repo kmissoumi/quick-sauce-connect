@@ -49,7 +49,7 @@ grep localdev /private/etc/hosts
 python3 -m venv venv
 . venv/bin/activate
 pip install Flask
-flask --app app/hello run --port 7777
+flask --app app/hello run --port 7777 --debug
 ```
 
 <br>
