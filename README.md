@@ -49,7 +49,7 @@ grep localdev /private/etc/hosts
 python3 -m venv venv
 . venv/bin/activate
 pip install Flask
-flask --app app/hello run --port 7777 --debug
+flask --app app/app run --port 7777 --debug
 ```
 
 <br>
@@ -70,6 +70,13 @@ sc run --config-file ./etc/sc-localdev.yml
 - Enter the URL `http://localdev:7777` and test against your local host's resources!
   - Validated on Browsers, Devices, Emulators, and Simulators.
 
+<br>
+
+> You can share a file, such as a certficate, from localhost to access on the remote browser or device by setting the `DEMO_SHARE` environment variable to the the file or path to share.
+> ```sh
+> export DEMO_SHARE='./app/.'
+> flask --app app/app run --port 7777 --debug
+> ```
 
 <br>
 

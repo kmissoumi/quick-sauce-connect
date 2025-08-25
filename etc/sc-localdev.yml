@@ -1,8 +1,7 @@
 user:
 api-key:
-tunnel-name: localdev
-verbose: 0
 region:
+tunnel-name: localdev
 logfile: "-"
 proxy-localhost: allow
 direct-domains: all,-.*localdev,-.*localhost
