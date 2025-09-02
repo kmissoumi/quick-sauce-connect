@@ -92,23 +92,35 @@ sc run --config-file ./etc/sc-localdev.yml
 ```shell
 export SAUCE_USERNAME=""
 export SAUCE_ACCESS_KEY=""
-export SAUCE_REGION="eu-central-1"
+export SAUCE_REGION=""
 export WONDERPROXY_USER=""
 export WONDERPROXY_PASS=""
 
 # Start a Tunnel in Canada
-sc --config-file ./etc/sc-wonderproxy-ca.yml --proxy-userpwd "${WONDERPROXY_USER}:${WONDERPROXY_PASS}"
+sc run \
+  --config-file ./etc/sc-geoip.yml \
+  --tunnel-name geoip-canada \
+  --proxy "${WONDERPROXY_USER}:${WONDERPROXY_PASS}@ottawa.wonderproxy.com:12000"
 
-# Start a Tunnel in Australia
-sc --config-file ./etc/sc-wonderproxy-au.yml --proxy-userpwd "${WONDERPROXY_USER}:${WONDERPROXY_PASS}"
+# Start a Tunnel Down Under
+sc run \
+  --config-file ./etc/sc-geoip.yml \
+  --tunnel-name geoip-australia \
+  --proxy ${WONDERPROXY_USER}:${WONDERPROXY_PASS}@sydney.wonderproxy.com:12000
+
+# Start a Tunnel in España
+sc run \
+  --config-file ./etc/sc-geoip.yml \
+  --tunnel-name geoip-españa \
+  --proxy ${WONDERPROXY_USER}:${WONDERPROXY_PASS}@madrid.wonderproxy.com:12000
 ```
 
 - Open the [Sauce Labs Live Testing][Live Testing EU] URL
   - Select the type of session.
     - Desktop, Mobile Real, or Mobile Virtual.
   - Select the sauce-connect tunnel.
-    - It should be `geo-ip-[TWO DIGIT COUNTRY CODE]`
-      - e.g. `geoip-ca`, `geoip-au`
+    - It should be `geo-ip-[COUNTRY NAME]`
+      - e.g. `geoip-canada`, `geoip-australia`
   - Start your session.
 
 

@@ -1,0 +1,10 @@
+username: 
+access-key:
+region:
+tunnel-name:
+proxy:
+auth:
+tls-passthrough-domains:
+  - .*
+log-level: info
+log-http: proxy:short-url

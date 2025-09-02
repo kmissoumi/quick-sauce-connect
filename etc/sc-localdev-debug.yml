@@ -5,5 +5,6 @@ tunnel-name: localdev
 logfile: "-"
 proxy-localhost: allow
 direct-domains: all,-.*localdev,-.*localhost
-log-level: info
-log-http: proxy:short-url
+log-level: debug
+log-http: api:errors,proxy:headers,url
+api-address: :8032
